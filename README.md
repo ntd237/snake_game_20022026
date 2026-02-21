@@ -52,8 +52,8 @@ Do đây là dự án Web tĩnh (Static Web), bạn không cần cài đặt Nod
 
 **Bước 1:** Clone repository
 ```bash
-git clone https://github.com/ntd237/classic-snake-game.git
-cd classic-snake-game
+git clone https://github.com/ntd237/snake_game_20022026.git
+cd snake_game_20022026
 ```
 
 **Bước 2:** Chạy game
