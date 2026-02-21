@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game - Premium Edition</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Background Wrapper -->
+    <div class="app-container">
+        <!-- Main Game Area -->
+        <main class="game-wrapper glass-panel">
+            <!-- HUD Overlay Score Zone -->
+            <div class="hud-score">
+                <div class="score-text">
+                    Điểm số: <span id="currentScore" class="value">0</span>
+                </div>
+                <div class="score-text">
+                    Kỷ lục: <span id="highScore" class="value">0</span>
+                </div>
+            </div>
+
+            <canvas id="gameCanvas" width="1200" height="900"></canvas>
+        </main>
+
+        <!-- Start Menu Modal -->
+        <div id="startModal" class="modal glass-panel active">
+            <h1>SNAKE GAME</h1>
+            <div class="settings-group">
+                <h3>Độ Khó</h3>
+                <div class="radio-group">
+                    <input type="radio" name="difficulty" id="diff-easy" value="EASY" checked>
+                    <label for="diff-easy">Dễ</label>
+
+                    <input type="radio" name="difficulty" id="diff-normal" value="NORMAL">
+                    <label for="diff-normal">Bình thường</label>
+
+                    <input type="radio" name="difficulty" id="diff-hard" value="HARD">
+                    <label for="diff-hard">Khó</label>
+                </div>
+            </div>
+
+            <div class="settings-group">
+                <h3>Tính Năng</h3>
+                <div class="checkbox-group">
+                    <label class="toggle-control">
+                        <input type="checkbox" id="toggle-obstacles">
+                        <span class="control"></span>
+                        Bật Chướng Ngại Vật
+                    </label>
+                    <label class="toggle-control">
+                        <input type="checkbox" id="toggle-dynamic-speed">
+                        <span class="control"></span>
+                        Tốc Độ Động
+                    </label>
+                </div>
+            </div>
+
+            <button id="btnStart" class="btn-primary">BẮT ĐẦU</button>
+        </div>
+
+        <!-- Game Over Modal -->
+        <div id="gameOverModal" class="modal glass-panel">
+            <h2 class="danger-text">GAME OVER</h2>
+            <div class="final-score-box">
+                <p>Điểm của bạn</p>
+                <div id="finalScore" class="score-large">0</div>
+            </div>
+            <button id="btnRestart" class="btn-primary">CHƠI LẠI</button>
+        </div>
+    </div>
+
+    <!-- Scripts (Loaded in order) -->
+    <script src="js/config.js"></script>
+    <script src="js/entities.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/engine.js"></script>
+</body>
+
+</html>
